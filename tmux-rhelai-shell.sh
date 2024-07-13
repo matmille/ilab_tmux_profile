@@ -1,7 +1,7 @@
 #!/bin/bash
 SESSION="rhelai"
 
-sudo dnf -y install mc dialog
+sudo dnf -y install dialog mc systat
 
 tmux kill-session -t $SESSION
 tmux new-session -d -s $SESSION
@@ -18,8 +18,8 @@ tmux send-keys -t $SESSION:0.0 "source venv/bin/activate" Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "clear" Enter
 sleep 1e-06
-tmux send-keys -t $SESSION:0.1 "nvtop" Enter
-tmux send-keys -t $SESSION:0.2 'top' Enter
+tmux send-keys -t $SESSION:0.1 'nvtop && exit' Enter
+tmux send-keys -t $SESSION:0.2 'top && exit' Enter
 sleep 1
 tmux send-keys -t $SESSION:0.2 't' Enter
 sleep 1e-06
