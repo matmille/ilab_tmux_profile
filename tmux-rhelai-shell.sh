@@ -27,5 +27,6 @@ sleep 1e-06
 tmux send-keys -t $SESSION:0.2 'i' Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.2 'z' Enter
+tmux set-option mouse on
 tmux select-pane -t $SESSION:0.0
 tmux attach-session -t $SESSION
