@@ -11,8 +11,11 @@ tmux resize-pane -R 20
 tmux send-keys -t $SESSION:0.0 "mc -x" Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "" Enter
+sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "source venv/bin/activate" Enter
+sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "clear" Enter
+sleep 1e-06
 tmux send-keys -t $SESSION:0.1 "nvtop" Enter
 tmux send-keys -t $SESSION:0.2 'top' Enter
 sleep 1
