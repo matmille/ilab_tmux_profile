@@ -10,7 +10,7 @@ tmux split-window -v -t $SESSION:
 tmux resize-pane -R 20
 tmux send-keys -t $SESSION:0.0 "mc -x" Enter
 sleep 1e-06
-tmux send-keys -t $SESSION:0.0 "" Enter
+tmux send-keys -t $SESSION:0.0 "cd ~/instructlab-latest" Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "source venv/bin/activate" Enter
 sleep 1e-06
