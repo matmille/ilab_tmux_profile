@@ -3,6 +3,9 @@ SESSION="rhelai"
 
 sudo dnf -y install dialog fx mc sysstat
 curl --remote-name-all https://raw.githubusercontent.com/matmille/ilab_tmux_profile/main/.config/mc/{hotlist,ini,panels.ini} --create-dirs --output-dir ~/.config/mc
+printf "ENTRY \"%s\" \"%s\"" $TMPDIR $WORKDIR >> ~/.config/hostlist
+printf "ENTRY \"%s\" \"%s\"" $TMPDIR $TMPDIR >> ~/.config/hostlist
+
 
 tmux kill-session -t $SESSION
 tmux new-session -d -s $SESSION
