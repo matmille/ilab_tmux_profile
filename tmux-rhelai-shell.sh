@@ -22,19 +22,21 @@ tmux send-keys -t $SESSION:0.0 "source venv/bin/activate" Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "clear" Enter
 sleep 1e-06
+tmux send-keys -t $SESSION:0.0 "ilab sysinfo" Enter
+sleep 1e-06
 tmux send-keys -t $SESSION:0.1 'nvtop && exit' Enter
 tmux send-keys -t $SESSION:0.2 'top && exit' Enter
 sleep 1
 tmux send-keys -t $SESSION:0.2 't' Enter
-sleep 1e-06
+sleep .5
 tmux send-keys -t $SESSION:0.2 't' Enter
-sleep 1e-06
+sleep .5
 tmux send-keys -t $SESSION:0.2 'm' Enter
-sleep 1e-06
+sleep .5
 tmux send-keys -t $SESSION:0.2 'm' Enter
-sleep 1e-06
+sleep .5
 tmux send-keys -t $SESSION:0.2 'i' Enter
-sleep 1e-06
+sleep .5
 tmux send-keys -t $SESSION:0.2 'z' Enter
 tmux set-option mouse on
 tmux select-pane -t $SESSION:0.0
