@@ -22,7 +22,7 @@ tmux send-keys -t $SESSION:0.0 "source venv/bin/activate" Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.0 "clear" Enter
 sleep 1e-06
-tmux send-keys -t $SESSION:0.0 "ilab sysinfo" Enter
+tmux send-keys -t $SESSION:0.0 "ilab system info" Enter
 sleep 1e-06
 tmux send-keys -t $SESSION:0.1 'nvtop && exit' Enter
 tmux send-keys -t $SESSION:0.2 'top && exit' Enter
